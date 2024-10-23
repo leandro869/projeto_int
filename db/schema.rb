@@ -29,13 +29,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_04_234137) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "movies", force: :cascade do |t|
-    t.string "name"
-    t.date "released_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "question_users", force: :cascade do |t|
     t.bigint "question_id", null: false
     t.bigint "user_id", null: false
@@ -50,6 +43,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_04_234137) do
     t.string "title"
     t.string "option_1"
     t.string "option_2"
+    t.string "option_3"
+    t.string "option_4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -62,12 +57,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_04_234137) do
   end
 
   create_table "stored_urls", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "studios", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
